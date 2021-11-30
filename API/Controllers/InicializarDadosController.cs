@@ -19,16 +19,23 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create()
         {
+            _context.FormasPagamento.AddRange(new FormaPagamento[]
+                {
+                    new FormaPagamento { FormaPagamentoId = 1, Nome = "Boleto", AVista =true },
+                    new FormaPagamento { FormaPagamentoId = 2, Nome = "Pix", AVista =true },
+                    new FormaPagamento { FormaPagamentoId = 3, Nome = "Cartão", AVista =false },
+                }
+            );
             _context.Categorias.AddRange(new Categoria[]
                 {
-                    new Categoria { CategoriaId = 1, Nome = "Categoria 1" },
+                    new Categoria { CategoriaId = 1, Nome = "Celular" },
                 }
             );
             _context.Produtos.AddRange(new Produto[]
                 {
-                    new Produto { ProdutoId = 1, Nome = "Produto 1", Preco = 1, Quantidade = 1, CategoriaId = 1 },
-                    new Produto { ProdutoId = 2, Nome = "Produto 2", Preco = 2, Quantidade = 2, CategoriaId = 1 },
-                    new Produto { ProdutoId = 3, Nome = "Produto 3", Preco = 3, Quantidade = 3, CategoriaId = 1 },
+                    new Produto { ProdutoId = 1, Nome = "Galaxy s21 ultra", Preco = 5000.00, Quantidade = 5, CategoriaId = 1 },
+                    new Produto { ProdutoId = 2, Nome = "Iphone 13", Preco = 6500.00, Quantidade = 15, CategoriaId = 1 },
+                    new Produto { ProdutoId = 3, Nome = "Mi 11 Ultra ", Preco = 11000.00, Quantidade = 2, CategoriaId = 1 },
                 }
             );
             _context.SaveChanges();
