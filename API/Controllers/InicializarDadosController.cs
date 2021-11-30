@@ -21,9 +21,9 @@ namespace API.Controllers
         {
             _context.FormasPagamento.AddRange(new FormaPagamento[]
                 {
-                    new FormaPagamento { FormaPagamentoId = 1, Nome = "Boleto", AVista =true },
-                    new FormaPagamento { FormaPagamentoId = 2, Nome = "Pix", AVista =true },
-                    new FormaPagamento { FormaPagamentoId = 3, Nome = "Cartão", AVista =false },
+                    new FormaPagamento { FormaPagamentoId = 1, Nome = "Boleto", AVista = true },
+                    new FormaPagamento { FormaPagamentoId = 2, Nome = "Pix", AVista = true },
+                    new FormaPagamento { FormaPagamentoId = 3, Nome = "Cartão", AVista = false },
                 }
             );
             _context.Categorias.AddRange(new Categoria[]
