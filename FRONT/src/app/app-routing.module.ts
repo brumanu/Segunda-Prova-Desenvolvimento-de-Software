@@ -4,6 +4,7 @@ import { CarrinhoComponent } from "./components/views/home/carrinho/carrinho.com
 import { IndexComponent } from "./components/views/home/index/index.component";
 import { CadastrarProdutoComponent } from "./components/views/produto/cadastrar-produto/cadastrar-produto.component";
 import { ListarProdutoComponent } from "./components/views/produto/listar-produto/listar-produto.component";
+import { ListarVendaComponent } from './components/views/venda/listar-venda/listar-venda.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
     {
         path: "produto/cadastrar",
         component: CadastrarProdutoComponent,
+    },
+    {
+        path: "venda/listar",
+        component: ListarVendaComponent,
     },
 ];
 
